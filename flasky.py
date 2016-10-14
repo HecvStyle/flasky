@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 bootstrap = Bootstrap(app)
 
+
 @app.route('/')
 def hello_world():
     return render_template('index.html')
@@ -16,9 +17,16 @@ def user(name):
     return render_template('user.html', name=name)
 
 
-@app.route('/myExtends')
-def show_extends():
-    return render_template('myExtends.html')
+@app.errorhandler(404)
+def page_not_found(e):
+    print(e)
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def internal_server_error(e):
+    print(e)
+    return render_template('500.html'), 500
 
 
 if __name__ == '__main__':
