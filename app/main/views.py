@@ -4,7 +4,7 @@
 # @Author  : HECV
 # @File    : views.py
 
-from  datetime import datetime
+from datetime import datetime
 from flask import render_template, session, redirect, url_for
 
 from . import main

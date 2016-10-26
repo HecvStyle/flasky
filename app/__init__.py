@@ -3,10 +3,10 @@
 # @Time    : 16/10/19 下午2:52
 # @Author  : HECV
 # @File    : __init__.py
-from flask import Flask, render_template
-from flask.ext.bootstrap import Bootstrap
-from flask.ext.moment import Moment
-from flask.ext.sqlalchemy import SQLAlchemy
+from flask import Flask
+from flask_bootstrap import Bootstrap
+from flask_moment import Moment
+from flask_sqlalchemy import SQLAlchemy
 from config import config
 
 
